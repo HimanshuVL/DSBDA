@@ -74,8 +74,8 @@ plt.show()
 
 ua=np.where(df['Statistics']>=upper_fence)[0]
 la=np.where(df['Statistics']<=lower_fence)[0]
-df.drop(index=ua)
-df.drop(index=la)
+df.drop(index=ua,inplace=True)
+df.drop(index=la,inplace=True)
 print("***********After removing outliner**********")
 print(df['Statistics'])
 
